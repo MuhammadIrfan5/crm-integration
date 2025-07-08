@@ -6,10 +6,9 @@ class SubscriberService
     protected $client;
     protected $listService;
 
-    public function __construct(CrmClient $client, ListService $listService)
+    public function __construct(CrmClient $client)
     {
         $this->client = $client;
-        $this->listService = $listService;
     }
 
     public function create(array $data): ?array

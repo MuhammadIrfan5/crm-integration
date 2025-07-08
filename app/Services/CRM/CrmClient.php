@@ -24,6 +24,7 @@ class CrmClient
             return Http::withToken($this->token)
                 ->get("{$this->baseUrl}{$endpoint}");
         } catch (\Throwable $e) {
+            //  logging the error in the log file with the endpoint and error message
             Log::error("crm get reuqest error at {$endpoint}", ['error' => $e->getMessage()]);
             return null;
         }

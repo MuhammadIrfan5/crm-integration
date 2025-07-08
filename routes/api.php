@@ -8,3 +8,4 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 Route::post('/my-subscribers', [App\Http\Controllers\API\SubscriberController::class, 'store']);
+Route::post('/send-enquiry', [App\Http\Controllers\API\SubscriberController::class, 'store']);
